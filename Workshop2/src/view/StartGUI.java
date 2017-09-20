@@ -7,7 +7,8 @@ public class StartGUI {
 	}
 	
 	public void option() {
-		System.out.print("What do u like to do ?");
+		System.out.print("What do u like to do ?"
+				+ "\nCreate user press 1 :");
 	}
 
 }
