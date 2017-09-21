@@ -11,30 +11,36 @@ public class Console {
 		MemberHandler user = new MemberHandler();
 		
 		
-		System.out.println("Welcome to The jolly pirate"
-				+ "\nWhat do u like to do ?"
-				+ "\nCreate user press 1"
-				+ "\nEdit user press   2" 
-				+ "\nDelete user press 3 ");
+		System.out.println("Welcome to The jolly pirate\n"
+				+ "press enter to start program");
 		
-		
-		
-		//The user input for the main menu option.
-		int choice  = userInput.intInput();
-		if(choice == 1) {
-			createMemberWindow();
+		 do{
+			System.out.print("\nWhat do u like to do ?"
+					+ "\nCreate user press 1"
+					+ "\nEdit user press   2" 
+					+ "\nDelete user press 3 "
+					+ "\nQuit user press 4 ");
+			
+			//The user input for the main menu option.
+			int choice  = userInput.intInput();
+			switch(choice) {
+				case 1: createMemberWindow(); break;
+				case 2: break;
+				case 3: deleteMemberWindow(); break;
+			}
 			user.option(choice);
-		}
-		else {
-			System.out.print("Hello");
-		}
-		
-		
-	
-		
-		
+		 } while(true);
+			
+			
 	}
 	
+	
+	private void deleteMemberWindow() {
+		System.out.print("What is the memberID of the member"
+				+ "you want to delete? \n");
+		
+	}
+
 	public void createMemberWindow() {
 		
 		System.out.print("Add member information!"
@@ -42,6 +48,6 @@ public class Console {
 	}
 	
 
-
+	
 	
 }
