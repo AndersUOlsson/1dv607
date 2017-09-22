@@ -9,8 +9,6 @@ public class MemberHandler {
 	public void option(int choice) {
 		switch(choice) {
 			case 1: member.add(createMember()); break;
-			case 2: deleteMember(); break;
-
 		}
 	}
 	
@@ -31,26 +29,4 @@ public class MemberHandler {
 		
 		return member;
 	}
-	
-	private void deleteMember() {
-		
-		
-		Controller scan = new Controller();
-		int memberID = 0;
-		memberID = scan.intInput();
-		
-		for(int i = 0; i < member.size(); i++)
-			if(member.get(i).memberID == memberID)
-				member.remove(i);
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

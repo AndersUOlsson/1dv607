@@ -19,7 +19,7 @@ public class Console {
 					+ "\nCreate user press 1"
 					+ "\nEdit user press   2" 
 					+ "\nDelete user press 3 "
-					+ "\nQuit user press 4 ");
+					+ "\nView member press 4 ");
 			
 			//The user input for the main menu option.
 			int choice  = userInput.intInput();
