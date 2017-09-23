@@ -14,7 +14,6 @@ public class ThejollypirateDAO {
 	MemberList members;
 	String fileLocation = "C:\\Users\\andyw\\git\\1dv607\\Workshop2\\members.xml";
 	
-
 	/**
 	 * Write members list to XML 
 	 * @throws IOException printStackTrace
@@ -55,5 +54,23 @@ public class ThejollypirateDAO {
 			e.printStackTrace();
 		}
 		return members;
+	}
+
+	public int findMemberID() {
+		
+		int highestMemberID = 0;
+		try {
+			for(int i = 0; i < loadMembersFromXml().getMembers().size(); i++) {
+				int usedMemberIDs = loadMembersFromXml().getMembers().get(i).getMemberID();
+				if(usedMemberIDs > highestMemberID) {
+					highestMemberID = usedMemberIDs;
+		
+				}
+			}
+		}
+		catch(NullPointerException e) {}
+		
+		highestMemberID++;
+		return highestMemberID;
 	}
 }

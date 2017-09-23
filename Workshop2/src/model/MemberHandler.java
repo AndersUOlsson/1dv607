@@ -33,10 +33,13 @@ public class MemberHandler {
 		Member member;
 		int personalNumber = 0;
 		String name = null;
+		int memberID = DAO.findMemberID();
+		
+		System.out.print("This is the member" + memberID);
 		
 		name = scan.stringInput();
 		personalNumber = scan.intInput();
-		member = new Member(name, personalNumber);
+		member = new Member(name, personalNumber, memberID);
 		this.members.add(member);
 	}
 	

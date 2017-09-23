@@ -5,15 +5,15 @@ public class Member {
 	//Variables for member.
 	private String name;
 	private int personalNumber;
-	int memberID  = 0;
+	int memberID;
 	
 	public Member(){}
 
 	//Constructor.
-	public Member(String name, int personalNumber ) {
+	public Member(String name, int personalNumber, int MemberID ) {
 		this.name = name;
 		this.personalNumber = personalNumber;
-		this.memberID++;
+		this.memberID = MemberID;
 	}
 	
 	//Set and get name for member.
