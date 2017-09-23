@@ -9,6 +9,9 @@ public class MemberHandler {
 	
 	Console consloe = new Console();
 	public ArrayList<Member> members = new ArrayList<Member>();
+	ThejollypirateDAO DAO = new ThejollypirateDAO();
+	MemberList memberList = new MemberList();
+	private boolean nullIndicator = true;
 	
 	
 	public void option(int choice) throws IOException {
@@ -37,21 +40,33 @@ public class MemberHandler {
 		this.members.add(member);
 	}
 	
+	/**
+	 * Load all the new created members to XML file (SAVE).
+	 * @throws IOException 
+	 */
 	private void loadToXMLFile() throws IOException {
 		
-		ThejollypirateDAO DAO = new ThejollypirateDAO();
-		MemberList memberList = new MemberList();
-		
+		 
 //		Load in all the members from XML to arrayList memberList.
-		for(int i = 0; i < DAO.loadMembersFromXml().getMembers().size(); i++) {
-			this.members.add(DAO.loadMembersFromXml().getMembers().get(i));
+		try{
+			if(nullIndicator) {
+				nullIndicator = false;
+				for(int i = 0; i < DAO.loadMembersFromXml().getMembers().size(); i++) {
+					this.members.add(DAO.loadMembersFromXml().getMembers().get(i));		
+				}
+			}
+			
 		}
+		catch(NullPointerException e) {}
+		
+			
+
 		
 		memberList.setMembers(this.members);
-		
 		DAO.writeMembersToXml(memberList);
 		
 		
 		consloe.saveMemberWindow();
 	}
+
 }

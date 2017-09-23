@@ -2,17 +2,22 @@
 <members>
     <member>
         <memberID>1</memberID>
-        <name>Erik</name>
-        <personalNumber>51</personalNumber>
-    </member>
-    <member>
-        <memberID>0</memberID>
-        <name>Therezia</name>
-        <personalNumber>2</personalNumber>
-    </member>
-    <member>
-        <memberID>0</memberID>
         <name>Anders</name>
-        <personalNumber>1</personalNumber>
+        <personalNumber>19880405</personalNumber>
+    </member>
+    <member>
+        <memberID>1</memberID>
+        <name>sdsad</name>
+        <personalNumber>3242</personalNumber>
+    </member>
+    <member>
+        <memberID>1</memberID>
+        <name>faw</name>
+        <personalNumber>3242</personalNumber>
+    </member>
+    <member>
+        <memberID>1</memberID>
+        <name>dsfsdfs</name>
+        <personalNumber>342344</personalNumber>
     </member>
 </members>
