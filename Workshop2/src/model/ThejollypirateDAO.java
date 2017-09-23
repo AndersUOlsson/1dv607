@@ -56,6 +56,10 @@ public class ThejollypirateDAO {
 		return members;
 	}
 
+	/**
+	 * Finding the highest memberID in the system.
+	 * @return highest memberID plus 1.
+	 */
 	public int findMemberID() {
 		
 		int highestMemberID = 0;
