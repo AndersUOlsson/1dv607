@@ -5,7 +5,7 @@ public class Member {
 	//Variables for member.
 	private String name;
 	private int personalNumber;
-	//int memberID  = 0;
+	int memberID  = 0;
 	
 	public Member(){}
 
@@ -13,7 +13,7 @@ public class Member {
 	public Member(String name, int personalNumber ) {
 		this.name = name;
 		this.personalNumber = personalNumber;
-		//this.memberID++;
+		this.memberID++;
 	}
 	
 	//Set and get name for member.
@@ -25,8 +25,8 @@ public class Member {
 	public int getPersonalNumber() {return this.personalNumber;}
 	
 	//Set and get member id.
-	//public void setMemberID(int memberID) {this.memberID = memberID;}
-	//public int getMemberID() {return this.memberID;}
+	public void setMemberID(int memberID) {this.memberID = memberID;}
+	public int getMemberID() {return this.memberID;}
 	
 
 }

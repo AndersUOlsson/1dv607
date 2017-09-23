@@ -1,14 +1,20 @@
 package model;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import view.Console;
 
 public class MemberHandler {
 	
-	public ArrayList<Member> member = new ArrayList<Member>();
+	Console consloe = new Console();
+	public ArrayList<Member> members = new ArrayList<Member>();
 	
-	public void option(int choice) {
+	
+	public void option(int choice) throws IOException {
 		switch(choice) {
-			case 1: member.add(createMember()); break;
+			case 1: createMember(); break;
+			case 4: loadToXMLFile(); break;
 		}
 	}
 	
@@ -16,8 +22,10 @@ public class MemberHandler {
 	 * Create new members and adding them in the array list member.
 	 * @return	A member of class member.
 	 */
-	private Member createMember() {
+	private void createMember() {
 		
+		consloe.createMemberWindow();
+	
 		Controller scan = new Controller();
 		Member member;
 		int personalNumber = 0;
@@ -26,7 +34,24 @@ public class MemberHandler {
 		name = scan.stringInput();
 		personalNumber = scan.intInput();
 		member = new Member(name, personalNumber);
+		this.members.add(member);
+	}
+	
+	private void loadToXMLFile() throws IOException {
 		
-		return member;
+		ThejollypirateDAO DAO = new ThejollypirateDAO();
+		MemberList memberList = new MemberList();
+		
+//		Load in all the members from XML to arrayList memberList.
+		for(int i = 0; i < DAO.loadMembersFromXml().getMembers().size(); i++) {
+			this.members.add(DAO.loadMembersFromXml().getMembers().get(i));
+		}
+		
+		memberList.setMembers(this.members);
+		
+		DAO.writeMembersToXml(memberList);
+		
+		
+		consloe.saveMemberWindow();
 	}
 }

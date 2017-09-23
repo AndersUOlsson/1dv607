@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<members>
+    <member>
+        <memberID>1</memberID>
+        <name>Erik</name>
+        <personalNumber>51</personalNumber>
+    </member>
+    <member>
+        <memberID>0</memberID>
+        <name>Therezia</name>
+        <personalNumber>2</personalNumber>
+    </member>
+    <member>
+        <memberID>0</memberID>
+        <name>Anders</name>
+        <personalNumber>1</personalNumber>
+    </member>
+</members>

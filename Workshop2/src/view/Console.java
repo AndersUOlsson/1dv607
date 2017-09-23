@@ -1,11 +1,13 @@
 package view;
 
+import java.io.IOException;
+
 import model.Controller;
 import model.MemberHandler;
 
 public class Console {
 	
-	public void welcomeWindow() {
+	public void welcomeWindow() throws IOException {
 		
 		Controller userInput = new Controller();
 		MemberHandler user = new MemberHandler();
@@ -15,20 +17,16 @@ public class Console {
 				+ "press enter to start program");
 		
 		 do{
-			System.out.print("\nWhat do u like to do ?"
+			System.out.println("\nWhat do u like to do ?"
 					+ "\nCreate user press 1"
 					+ "\nEdit user press   2" 
 					+ "\nDelete user press 3 "
-					+ "\nView member press 4 ");
+					+ "\nLoad to XML press 4");
 			
 			//The user input for the main menu option.
 			int choice  = userInput.intInput();
-			switch(choice) {
-				case 1: createMemberWindow(); break;
-				case 2: break;
-				case 3: deleteMemberWindow(); break;
-			}
 			user.option(choice);
+			
 		 } while(true);
 			
 			
@@ -45,6 +43,10 @@ public class Console {
 		
 		System.out.print("Add member information!"
 				+ "\nName and personal number \n");
+	}
+	
+	public void saveMemberWindow() {
+		System.out.println("\nYour members have been saved.");
 	}
 	
 

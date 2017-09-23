@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "members")
-public class MemberDAO {
+public class MemberList {
 	
-	public MemberDAO() {}
+	public MemberList() {}
 	
 	@XmlElement(name = "member")
 	private List<Member> members = null;
