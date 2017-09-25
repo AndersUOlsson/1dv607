@@ -33,7 +33,7 @@ public class Console {
 	}
 	
 	
-	private void deleteMemberWindow() {
+	public void deleteMemberWindow() {
 		System.out.print("What is the memberID of the member"
 				+ "you want to delete? \n");
 		

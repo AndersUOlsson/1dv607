@@ -12,11 +12,13 @@ public class MemberHandler {
 	ThejollypirateDAO DAO = new ThejollypirateDAO();
 	MemberList memberList = new MemberList();
 	private boolean nullIndicator = true;
+	Controller scan = new Controller();
 	
 	
 	public void option(int choice) throws IOException {
 		switch(choice) {
 			case 1: createMember(); break;
+			case 3: deleteMember(); break;
 			case 4: loadToXMLFile(); break;
 		}
 	}
@@ -28,19 +30,37 @@ public class MemberHandler {
 	private void createMember() {
 		
 		consloe.createMemberWindow();
-	
-		Controller scan = new Controller();
+		
+		
 		Member member;
 		int personalNumber = 0;
 		String name = null;
 		int memberID = DAO.findMemberID();
-		
-		System.out.print("This is the member" + memberID);
+	
 		
 		name = scan.stringInput();
 		personalNumber = scan.intInput();
 		member = new Member(name, personalNumber, memberID);
 		this.members.add(member);
+	}
+	
+	private void deleteMember() throws IOException {
+		
+		consloe.deleteMemberWindow();
+		MemberList memberList = new MemberList();
+		memberList = DAO.loadMembersFromXml();
+		int numberIDtoDelete = scan.intInput();
+		 
+		for(int i = 0; i < memberList.getMembers().size(); i++) {
+			if(memberList.getMembers().get(i).getMemberID() == numberIDtoDelete) {
+				memberList.deleteMember(i);
+			}
+		} 
+		 
+		DAO.writeMembersToXml(memberList);
+		
+		
+		
 	}
 	
 	/**

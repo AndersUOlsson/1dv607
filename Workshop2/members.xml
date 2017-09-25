@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <members>
     <member>
-        <memberID>1</memberID>
-        <name>sdfsd</name>
-        <personalNumber>21313</personalNumber>
+        <memberID>5</memberID>
+        <name>Anders</name>
+        <personalNumber>1988</personalNumber>
     </member>
     <member>
-        <memberID>2</memberID>
-        <name>hfhfdh</name>
-        <personalNumber>53454</personalNumber>
+        <memberID>4</memberID>
+        <name>Erik</name>
+        <personalNumber>1984</personalNumber>
+    </member>
+    <member>
+        <memberID>3</memberID>
+        <name>julia</name>
+        <personalNumber>1988</personalNumber>
+    </member>
+    <member>
+        <memberID>1</memberID>
+        <name>therezia</name>
+        <personalNumber>1985</personalNumber>
     </member>
 </members>

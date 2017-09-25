@@ -25,4 +25,9 @@ public class MemberList {
 	public void setMembers(List<Member> members) {
 		this.members = members;
 	}
+	
+	public void deleteMember(int i ) {
+		this.members.remove(i);
+		
+	}
 }
