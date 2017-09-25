@@ -1,11 +1,11 @@
 package model;
 
-public class Member {
+public class Member implements IMembers {
 	
 	//Variables for member.
 	private String name;
 	private int personalNumber;
-	int memberID;
+	private int memberID;
 	
 	public Member(){}
 
@@ -27,6 +27,4 @@ public class Member {
 	//Set and get member id.
 	public void setMemberID(int memberID) {this.memberID = memberID;}
 	public int getMemberID() {return this.memberID;}
-	
-
 }
