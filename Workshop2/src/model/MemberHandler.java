@@ -18,37 +18,46 @@ public class MemberHandler {
 	public void option(int choice) throws IOException {
 		switch(choice) {
 			case 1: createMember(); break;
+			case 2: changeMember(); break;
 			case 3: deleteMember(); break;
-			case 4: loadToXMLFile(); break;
 		}
 	}
 	
 	/**
 	 * Create new members and adding them in the array list member.
 	 * @return	A member of class member.
+	 * @throws IOException 
 	 */
-	private void createMember() {
+	private void createMember() throws IOException {
 		
 		consloe.createMemberWindow();
 		
 		
-		Member member;
+		loadMembers();
+		
 		int personalNumber = 0;
 		String name = null;
 		int memberID = DAO.findMemberID();
-	
 		
+//		Input data from administrator.
 		name = scan.stringInput();
 		personalNumber = scan.intInput();
-		member = new Member(name, personalNumber, memberID);
+		
+		Member member = new Member(name, personalNumber, memberID);
 		this.members.add(member);
+		memberList.setMembers(members);
+		DAO.writeMembersToXml(memberList);
 	}
 	
+	/**
+	 * Delete a member from the XML file by giving the member ID.
+	 * @throws IOException for XML read and write.
+	 */
 	private void deleteMember() throws IOException {
 		
 		consloe.deleteMemberWindow();
-		MemberList memberList = new MemberList();
-		memberList = DAO.loadMembersFromXml();
+		this.memberList = DAO.loadMembersFromXml();
+		
 		int numberIDtoDelete = scan.intInput();
 		 
 		for(int i = 0; i < memberList.getMembers().size(); i++) {
@@ -58,38 +67,30 @@ public class MemberHandler {
 		} 
 		 
 		DAO.writeMembersToXml(memberList);
-		
-		
-		
 	}
+	
+	private void changeMember() {}
 	
 	/**
 	 * Load all the new created members to XML file (SAVE).
 	 * @throws IOException 
 	 */
-	private void loadToXMLFile() throws IOException {
+	private  void loadMembers() throws IOException {
 		
+		this.memberList = DAO.loadMembersFromXml();
 		 
 //		Load in all the members from XML to arrayList memberList.
 		try{
 			if(nullIndicator) {
 				nullIndicator = false;
-				for(int i = 0; i < DAO.loadMembersFromXml().getMembers().size(); i++) {
-					this.members.add(DAO.loadMembersFromXml().getMembers().get(i));		
+				for(int i = 0; i < this.memberList.getMembers().size(); i++) {
+					this.members.add(this.memberList.getMembers().get(i));		
 				}
 			}
 			
 		}
 		catch(NullPointerException e) {}
-		
-			
-
-		
-		memberList.setMembers(this.members);
-		DAO.writeMembersToXml(memberList);
-		
-		
-		consloe.saveMemberWindow();
 	}
+
 
 }

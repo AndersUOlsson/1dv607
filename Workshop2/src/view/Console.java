@@ -20,8 +20,7 @@ public class Console {
 			System.out.println("\nWhat do u like to do ?"
 					+ "\nCreate user press 1"
 					+ "\nEdit user press   2" 
-					+ "\nDelete user press 3 "
-					+ "\nLoad to XML press 4");
+					+ "\nDelete user press 3\n");
 			
 			//The user input for the main menu option.
 			int choice  = userInput.intInput();
@@ -41,8 +40,8 @@ public class Console {
 
 	public void createMemberWindow() {
 		
-		System.out.print("Add member information!"
-				+ "\nName and personal number \n");
+		System.out.println("Add member information!"
+				+ "\nName and personal number");
 	}
 	
 	public void saveMemberWindow() {
