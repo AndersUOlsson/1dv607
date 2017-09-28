@@ -32,7 +32,6 @@ public class MemberHandler {
 		
 		consloe.createMemberWindow();
 		
-		
 		loadMembers();
 		
 		int personalNumber = 0;
@@ -43,8 +42,9 @@ public class MemberHandler {
 		name = scan.stringInput();
 		personalNumber = scan.intInput();
 		
-		Member member = new Member(name, personalNumber, memberID);
-		this.members.add(member);
+		//Member member = new Member(name, personalNumber, memberID);
+		Member verboseList = new Member(name, personalNumber, memberID);
+		this.members.add(verboseList);
 		memberList.setMembers(members);
 		DAO.writeMembersToXml(memberList);
 	}
@@ -69,7 +69,46 @@ public class MemberHandler {
 		DAO.writeMembersToXml(memberList);
 	}
 	
-	private void changeMember() {}
+	private void changeMember() throws IOException {
+		
+		consloe.changeMemberWindow();
+		int memberID = scan.intInput();
+		
+		loadMembers();
+		Member member = new Member();
+		for(int i = 0; i < this.members.size(); i++) {
+			if(this.members.get(i).getMemberID() == memberID) {
+				member = this.members.get(i); 
+			}
+		}
+		
+		System.out.print("Name of member " + member.getName());
+		
+		consloe.optionChangeMemberWindow();
+		int input = scan.intInput();
+		
+		
+		switch(input) {
+			case 1: {
+				String name = scan.stringInput();
+				member.setName(name);
+				System.out.print("Name of member " + member.getName());
+			} break;
+			case 2: {
+				int personalNumber = scan.intInput();
+				member.setPersonalNumber(personalNumber);
+			} break;
+			case 3: {
+				String boatInformation = scan.stringInput();
+				member.setBoatInformation(boatInformation);
+			}
+		}
+		
+		
+		this.memberList.setMembers(members);
+		DAO.writeMembersToXml(memberList);
+		
+	}
 	
 	/**
 	 * Load all the new created members to XML file (SAVE).

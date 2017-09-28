@@ -3,11 +3,13 @@
     <member>
         <memberID>1</memberID>
         <name>Anders</name>
-        <personalNumber>1988</personalNumber>
+        <numberOfBoats>0</numberOfBoats>
+        <personalNumber>23</personalNumber>
     </member>
     <member>
         <memberID>2</memberID>
-        <name>Therezia</name>
-        <personalNumber>1985</personalNumber>
+        <name>Erik</name>
+        <numberOfBoats>0</numberOfBoats>
+        <personalNumber>1984</personalNumber>
     </member>
 </members>
