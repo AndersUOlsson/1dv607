@@ -6,7 +6,19 @@ public class Boat {
 	private Type type;
 	
 	public enum Type {
-		SAILBOAT, MOTORSAILER, CANOE, OTHER
+		SAILBOAT("Sailboat"),
+		MOTORSAILER("Motor sailer"),
+		CANOE("Canoe/cayak"),
+		OTHER("Other");
+		
+		private final String readable;
+		private Type(String rin) {
+			readable = rin;
+		}
+		@Override
+		public String toString() {
+			return readable;
+		}
 	}
 	
 	public Boat(Type t, double l) {

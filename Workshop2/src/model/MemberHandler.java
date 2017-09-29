@@ -83,5 +83,14 @@ public class MemberHandler {
 	public List<Member> getMembers() {
 		return this.memberList.getMembers();
 	}
+	
+	
+	public void addBoat(int memberID, Boat.Type type, int length) {
+		for (Member m: memberList.getMembers()) {
+			if (m.getMemberID() == memberID) {
+				BoatHandler.addBoat(m, type, length);
+			}
+		}
+	}
 
 }
