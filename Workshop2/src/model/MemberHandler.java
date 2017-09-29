@@ -85,12 +85,13 @@ public class MemberHandler {
 	}
 	
 	
-	public void addBoat(int memberID, Boat.Type type, int length) {
+	public void addBoat(int memberID, Boat.Type type, int length) throws IOException  {
 		for (Member m: memberList.getMembers()) {
 			if (m.getMemberID() == memberID) {
 				BoatHandler.addBoat(m, type, length);
 			}
 		}
+		DAO.writeMembersToXml(memberList);
 	}
 
 }

@@ -29,10 +29,11 @@ public class Console {
 			System.out.print("\n============================\nWhat do u like to do?\n"
 					+ "1. Show verbose list of members and boats\n"
 					+ "2. Show compact list of members\n"
-					+ "3. Create new member\n"
-					+ "4. Change/Add information about member\n"
-					+ "5. Delete a member\n"
-					+ "6. Quit");
+					+ "3. Show specific user\n"
+					+ "4. Create new member\n"
+					+ "5. Change/Add information about member\n"
+					+ "6. Delete a member\n"
+					+ "7. Quit");
 			
 			//The user input for the main menu option.
 			choice = userInput.intInput();
@@ -44,17 +45,20 @@ public class Console {
 					compactList(user.getMembers());
 					break;
 				case 3:
-					createMemberWindow();
+					viewUser();
 					break;
 				case 4:
-					changeMemberWindow();
+					createMemberWindow();
 					break;
 				case 5:
+					changeMemberWindow();
+					break;
+				case 6:
 					deleteMemberWindow();
 					break;
 			}
 			
-		} while (choice != 6);
+		} while (choice != 7);
 		
 		System.out.print("System shutdown ");
 		for (int i = 0; i < 5; i++) {
@@ -143,9 +147,9 @@ public class Console {
 	
 	
 	public void compactList(List<Member> members) {
-		System.out.printf("%-4s %-30s %-12s %-4s%n%n", "ID", "Name", "P.Number", "Boats");
+		System.out.printf("%-4s %-30s %-4s%n%n", "ID", "Name", "Boats");
 		for (Member m : members) {
-			this.printInfo(m);
+			this.printCompactInfo(m);
 		}
 	}
 	
@@ -155,15 +159,38 @@ public class Console {
 			this.printInfo(m); // User info, yas
 			// now lets do their boats
 			if (m.getBoats().size() >0 )
-				System.out.printf("\t\t%-20s %10s%n", "Type", "Length (m)");
+				System.out.printf("     %-20s %10s%n", "Type", "Length (m)");
 			for (model.Boat b : m.getBoats()) {
-				System.out.printf("\t\t%-20s %10.0f%n", b.getType().toString(), b.getLength());
+				System.out.printf("     %-20s %10.0f%n", b.getType().toString(), b.getLength());
 			}
+			System.out.println("");
 		}
 	}
 	
 	public void printInfo(Member m) {
 		System.out.printf("%-4d %-30s %-12d %-4d%n", m.getMemberID(), m.getName(), m.getPersonalNumber(), m.getNumberOfBoats());
+	}
+	public void printCompactInfo(Member m) {
+		System.out.printf("%-4d %-30s %-4d%n", m.getMemberID(), m.getName(), m.getNumberOfBoats());
+	}
+	
+	private void viewUser() {
+		compactList(user.getMembers());
+		System.out.print("\nWhat is the memberID of the member you want to view?");
+		
+		int memberID = userInput.intInput();
+		for (Member m: user.getMembers()) {
+			if (m.getMemberID() == memberID) {
+				System.out.printf("%-4s %-30s %-12s %-4s%n%n", "ID", "Name", "P.Number", "Boats");
+				printInfo(m);
+				if (m.getBoats().size() >0 )
+					System.out.printf("     %-20s %10s%n", "Type", "Length (m)");
+				for (model.Boat b : m.getBoats()) {
+					System.out.printf("     %-20s %10.0f%n", b.getType().toString(), b.getLength());
+				}
+			}
+		}
+		
 	}
 	
 	

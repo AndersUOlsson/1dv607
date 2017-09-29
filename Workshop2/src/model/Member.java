@@ -1,6 +1,8 @@
 package model;
 
+import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Member implements IMembers {
 	
@@ -8,8 +10,8 @@ public class Member implements IMembers {
 	private String name;
 	private int personalNumber;
 	private int memberID;
-	ArrayList<Boat> boats = new ArrayList<>();
-	private int boatsNR;
+	
+	List<Boat> boats = new ArrayList<>();
 	
 	public Member() {
 	}
@@ -52,10 +54,14 @@ public class Member implements IMembers {
 	public void addBoat(Boat b) {
 		this.boats.add(b);
 	}
-	public ArrayList<Boat> getBoats() {
+	
+	public List<Boat> getBoats() {
 		return this.boats;
 	}
 	
+	public void setBoats(List<Boat> boatsn) {
+		this.boats = boatsn;
+	}
 	
 	public int getNumberOfBoats() {
 		return this.boats.size();
