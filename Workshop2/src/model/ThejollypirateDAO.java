@@ -12,7 +12,7 @@ import javax.xml.bind.Unmarshaller;
 public class ThejollypirateDAO {
 	
 	MemberList members;
-	String fileLocation = "C:\\Users\\andyw\\git\\1dv607\\Workshop2\\members.xml";
+	String fileLocation = "members.xml";
 	
 	/**
 	 * Write members list to XML 

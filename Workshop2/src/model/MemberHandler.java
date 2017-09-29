@@ -2,50 +2,37 @@ package model;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import view.Console;
+import view.IOController;
 
 public class MemberHandler {
 	
-	Console consloe = new Console();
-	public ArrayList<Member> members = new ArrayList<Member>();
+	//Console consloe = new Console();
 	ThejollypirateDAO DAO = new ThejollypirateDAO();
 	MemberList memberList = new MemberList();
 	private boolean nullIndicator = true;
-	Controller scan = new Controller();
+	IOController scan = new IOController();
 	
-	
-	public void option(int choice) throws IOException {
-		switch(choice) {
-			case 1: createMember(); break;
-			case 2: changeMember(); break;
-			case 3: deleteMember(); break;
-		}
+	public MemberHandler() throws IOException {
+		// get members from XML
+		loadMembers();
 	}
+	
+	
 	
 	/**
 	 * Create new members and adding them in the array list member.
 	 * @return	A member of class member.
 	 * @throws IOException 
 	 */
-	private void createMember() throws IOException {
+	public void createMember(String name, int personalNumber) throws IOException {
 		
-		consloe.createMemberWindow();
-		
-		loadMembers();
-		
-		int personalNumber = 0;
-		String name = null;
 		int memberID = DAO.findMemberID();
 		
-//		Input data from administrator.
-		name = scan.stringInput();
-		personalNumber = scan.intInput();
-		
-		//Member member = new Member(name, personalNumber, memberID);
-		Member verboseList = new Member(name, personalNumber, memberID);
-		this.members.add(verboseList);
-		memberList.setMembers(members);
+		Member member = new Member(name, personalNumber, memberID);
+		this.memberList.getMembers().add(member);
 		DAO.writeMembersToXml(memberList);
 	}
 	
@@ -53,12 +40,8 @@ public class MemberHandler {
 	 * Delete a member from the XML file by giving the member ID.
 	 * @throws IOException for XML read and write.
 	 */
-	private void deleteMember() throws IOException {
+	public void deleteMember(int numberIDtoDelete) throws IOException {
 		
-		consloe.deleteMemberWindow();
-		this.memberList = DAO.loadMembersFromXml();
-		
-		int numberIDtoDelete = scan.intInput();
 		 
 		for(int i = 0; i < memberList.getMembers().size(); i++) {
 			if(memberList.getMembers().get(i).getMemberID() == numberIDtoDelete) {
@@ -69,46 +52,23 @@ public class MemberHandler {
 		DAO.writeMembersToXml(memberList);
 	}
 	
-	private void changeMember() throws IOException {
-		
-		consloe.changeMemberWindow();
-		int memberID = scan.intInput();
-		
-		loadMembers();
-		Member member = new Member();
-		for(int i = 0; i < this.members.size(); i++) {
-			if(this.members.get(i).getMemberID() == memberID) {
-				member = this.members.get(i); 
+	public void updateName(int id, String name) throws IOException  {
+		for (Member m: memberList.getMembers()) {
+			if (m.getMemberID() == id) {
+				m.setName(name);
 			}
 		}
-		
-		System.out.print("Name of member " + member.getName());
-		
-		consloe.optionChangeMemberWindow();
-		int input = scan.intInput();
-		
-		
-		switch(input) {
-			case 1: {
-				String name = scan.stringInput();
-				member.setName(name);
-				System.out.print("Name of member " + member.getName());
-			} break;
-			case 2: {
-				int personalNumber = scan.intInput();
-				member.setPersonalNumber(personalNumber);
-			} break;
-			case 3: {
-				String boatInformation = scan.stringInput();
-				member.setBoatInformation(boatInformation);
-			}
-		}
-		
-		
-		this.memberList.setMembers(members);
 		DAO.writeMembersToXml(memberList);
-		
 	}
+	public void updatePersonalNumber(int id, int number) throws IOException  {
+		for (Member m: memberList.getMembers()) {
+			if (m.getMemberID() == id) {
+				m.setPersonalNumber(number);
+			}
+		}
+		DAO.writeMembersToXml(memberList);
+	}
+	
 	
 	/**
 	 * Load all the new created members to XML file (SAVE).
@@ -117,19 +77,11 @@ public class MemberHandler {
 	private  void loadMembers() throws IOException {
 		
 		this.memberList = DAO.loadMembersFromXml();
-		 
-//		Load in all the members from XML to arrayList memberList.
-		try{
-			if(nullIndicator) {
-				nullIndicator = false;
-				for(int i = 0; i < this.memberList.getMembers().size(); i++) {
-					this.members.add(this.memberList.getMembers().get(i));		
-				}
-			}
-			
-		}
-		catch(NullPointerException e) {}
+		
 	}
 
+	public List<Member> getMembers() {
+		return this.memberList.getMembers();
+	}
 
 }
