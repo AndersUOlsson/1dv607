@@ -18,8 +18,7 @@ public class MemberHandler {
 	public MemberHandler() throws IOException {
 		// get members from XML
 		loadMembers();
-	}
-	
+	}	
 	
 	
 	/**
@@ -91,6 +90,11 @@ public class MemberHandler {
 				BoatHandler.addBoat(m, type, length);
 			}
 		}
+		DAO.writeMembersToXml(memberList);
+	}
+	
+	public void saveMember() throws IOException 
+	{
 		DAO.writeMembersToXml(memberList);
 	}
 

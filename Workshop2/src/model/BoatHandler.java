@@ -11,5 +11,6 @@ public class BoatHandler {
 	public static void updateBoat(Member m, int index, Boat.Type t, double l) {
 		m.getBoats().get(index).setLength(l);
 		m.getBoats().get(index).setType(t);
+		
 	}
 }

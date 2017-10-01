@@ -5,17 +5,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Boat;
+import model.Boat.Type;
+import model.BoatHandler;
 import model.Member;
 import model.MemberHandler;
+import model.MemberList;
+import model.ThejollypirateDAO;
 
 public class Console {
 	private IOController userInput;
-	private MemberHandler user;
+	private MemberHandler user;		
 	
 	public Console() throws IOException {
 		// init these things
 		userInput = new IOController();
-		user = new MemberHandler();
+		user = new MemberHandler();			
 	}
 	
 	public void welcomeWindow() throws IOException, InterruptedException {
@@ -26,12 +30,12 @@ public class Console {
 		
 		
 		do {
-			System.out.print("\n============================\nWhat do u like to do?\n"
+			System.out.print("\n============================\nWhat would you like to do?\n"
 					+ "1. Show verbose list of members and boats\n"
 					+ "2. Show compact list of members\n"
 					+ "3. Show specific user\n"
 					+ "4. Create new member\n"
-					+ "5. Change/Add information about member\n"
+					+ "5. Change/Add information about member\n"					
 					+ "6. Delete a member\n"
 					+ "7. Quit");
 			
@@ -85,9 +89,14 @@ public class Console {
 		compactList(user.getMembers());
 		System.out.print("\nWhat is the memberID of the member you want to change?");
 		
-		int memberID = userInput.intInput();
-		
+		int memberID = userInput.intInput();		
 		int userChoice;
+		Member member = new Member();						
+		for (int i = 0; i < user.getMembers().size(); i++) {
+			if (user.getMembers().get(i).getMemberID() == memberID) {
+				member = user.getMembers().get(i);															
+			}												
+		}
 		do {
 			System.out.print("\nWhat do you like to change ?\n" + "1. name?\n" + "2. Personal number?\n" + "3. Boat information?\n" + "4. Done, go back.");
 			userChoice = userInput.intInput();
@@ -98,10 +107,10 @@ public class Console {
 				int newNumber = userInput.intInput("New personal number");
 				user.updatePersonalNumber(memberID, newNumber);
 			} else if (userChoice == 3) {
-				// BOAT MENU!!!!!
+				// BOAT MENU
 				int boatChoice;
 				do {
-					System.out.print("\nWhat about boats?\n" + "1. Add boat\n" + "2. Change boat\n" + "3. Remove boat\n" + "4. Done with boats, go back.");
+					System.out.print("\nWhat about boats?\n" + "1. Add boat\n" + "2. Change boat details\n" + "3. Remove boat\n" + "4. Done with boats, go back.");
 					boatChoice = userInput.intInput();
 					if (boatChoice == 1) {
 						// add boat
@@ -131,10 +140,69 @@ public class Console {
 						
 					} else if (boatChoice == 2) {
 						// change boat
+						System.out.println("\n" + member.getName() + "'s boats:");
+						for (int j = 0; j < member.getBoats().size(); j++)
+						{
+							System.out.println((j +1) + ". " + member.getBoats().get(j).getType().toString());
+						}
+						System.out.println("\nWhat is the number of the boat whose details you wish to modify?");
+						int boatIndex = userInput.intInput();
+						Boat boat = member.getBoats().get(boatIndex -1);
+						System.out.println("\n1. Boat Type: " + boat.getType().toString() + "\n2. Boat Length: " + boat.getLength() + "\n\nWhat information would you like to modify?" );
+						int infoIndex = userInput.intInput();						
+						if (infoIndex == 1)
+						{
+							System.out.println("\nIndicate new boat type: \n1. Sail Boat \n2. Motor Sailer \n3. Canoe/Kayak \n4. Other");
+							int boatType = userInput.intInput();
+							if (boatType == 1)
+							{
+								boat.setType(Type.SAILBOAT);
+							}
+							else if (boatType == 2)
+							{
+								boat.setType(Type.MOTORSAILER);
+							}
+							else if (boatType == 3)
+							{
+								boat.setType(Type.CANOE);
+							}
+							else if (boatType == 4)
+							{
+								boat.setType(Type.OTHER);
+							}
+						}
+						else
+						{
+							System.out.println("\nIndicate the boat's new length in meters:");
+							int boatLength = userInput.intInput();	
+							boat.setLength(boatLength);
+						}
+						user.saveMember();
 						
 					} else if (boatChoice == 3) {
-						// delete boat
-						
+						// delete boat						
+						int boatNum = member.getNumberOfBoats();
+						System.out.println(member.getName() + "'s boats: ");
+						for (int j = 0; j < member.getBoats().size(); j++)
+						{
+							System.out.println((j +1) + ". " + member.getBoats().get(j).getType().toString());
+						}
+						System.out.println("\nWhat is the number of the boat you want to delete?");
+						int boatIndex = userInput.intInput();
+						BoatHandler.removeBoat(member, boatIndex-1);
+						if (boatNum == member.getNumberOfBoats() +1)
+						{
+							System.out.println("Boat Successfully deleted." + member.getName() + "'s current boats: ");
+							for (int j = 0; j < member.getBoats().size(); j++)
+							{
+								System.out.println((j +1) + ". " + member.getBoats().get(j).getType().toString());
+							}
+						}
+						else
+						{
+							System.out.println("Error deleting boat.");
+						}
+						user.saveMember();
 					}
 				} while (boatChoice != 4);
 			}
@@ -192,6 +260,8 @@ public class Console {
 		}
 		
 	}
+	
+	
 	
 	
 }

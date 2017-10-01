@@ -21,7 +21,7 @@ public class IOController {
 			input = scan.nextInt();
 		}
 		catch(NoSuchElementException e) {
-			System.out.print("Enter a number, not a letter");
+			System.out.print("Enter a number, not a letter.");
 			input = intInput(text);
 			
 		}
@@ -42,7 +42,7 @@ public class IOController {
 			input = scan.nextLine();
 		}
 		catch(NoSuchElementException e) {
-			System.out.print("Enter a letter, not a number");
+			System.out.print("Enter a letter, not a number.");
 			input = stringInput(text);
 			
 		}

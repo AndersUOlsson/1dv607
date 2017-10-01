@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <members>
     <member>
+        <boats>
+            <length>3.0</length>
+            <type>SAILBOAT</type>
+        </boats>
+        <boats>
+            <length>4.0</length>
+            <type>CANOE</type>
+        </boats>
         <memberID>1</memberID>
         <name>Anders</name>
-        <numberOfBoats>0</numberOfBoats>
         <personalNumber>23</personalNumber>
     </member>
     <member>
         <memberID>2</memberID>
         <name>Erik</name>
-        <numberOfBoats>0</numberOfBoats>
         <personalNumber>1984</personalNumber>
     </member>
 </members>
