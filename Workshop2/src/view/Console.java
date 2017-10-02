@@ -73,6 +73,7 @@ public class Console {
 	
 	
 	public void deleteMemberWindow() throws IOException {
+		compactList(user.getMembers());
 		System.out.print("\nWhat is the ID of the member you want to delete? \n");
 		int numberIDtoDelete = userInput.intInput();
 		user.deleteMember(numberIDtoDelete);
@@ -81,7 +82,7 @@ public class Console {
 	public void createMemberWindow() throws IOException {
 		System.out.println("\nAdd member information.");
 		String name = userInput.stringInput("Name");
-		int personalNumber = userInput.intInput("ID number");
+		String personalNumber = this.inputPersonalNumber();
 		user.createMember(name, personalNumber);
 	}
 	
@@ -104,7 +105,7 @@ public class Console {
 				String newName = userInput.stringInput("New name");
 				user.updateName(memberID, newName);
 			} else if (userChoice == 2) {
-				int newNumber = userInput.intInput("New personal number");
+				String newNumber = inputPersonalNumber();
 				user.updatePersonalNumber(memberID, newNumber);
 			} else if (userChoice == 3) {
 				// BOAT MENU
@@ -236,7 +237,7 @@ public class Console {
 	}
 	
 	public void printInfo(Member m) {
-		System.out.printf("%-4d %-30s %-12d %-4d%n", m.getMemberID(), m.getName(), m.getPersonalNumber(), m.getNumberOfBoats());
+		System.out.printf("%-4d %-30s %-12s %-4d%n", m.getMemberID(), m.getName(), m.getPersonalNumber(), m.getNumberOfBoats());
 	}
 	public void printCompactInfo(Member m) {
 		System.out.printf("%-4d %-30s %-4d%n", m.getMemberID(), m.getName(), m.getNumberOfBoats());
@@ -261,7 +262,16 @@ public class Console {
 		
 	}
 	
-	
+	private String inputPersonalNumber() {
+		String personalNumber;
+		do {
+			personalNumber = userInput.stringInput("ID number");
+			if (!personalNumber.matches("([0-9]+)")) {
+				System.out.println("Numbers only, please!");
+			}
+		} while (!personalNumber.matches("([0-9]+)"));
+		return personalNumber;
+	}
 	
 	
 }

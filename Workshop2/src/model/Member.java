@@ -8,7 +8,7 @@ public class Member implements IMembers {
 	
 	//Variables for member.
 	private String name;
-	private int personalNumber;
+	private String personalNumber;
 	private int memberID;
 	
 	List<Boat> boats = new ArrayList<>();
@@ -17,7 +17,7 @@ public class Member implements IMembers {
 	}
 	
 	//Constructor.
-	public Member(String name, int personalNumber, int MemberID) {
+	public Member(String name, String personalNumber, int MemberID) {
 		this.name = name;
 		this.personalNumber = personalNumber;
 		this.memberID = MemberID;
@@ -33,11 +33,11 @@ public class Member implements IMembers {
 	}
 	
 	//Set and get personal number for member.
-	public void setPersonalNumber(int personalNumber) {
+	public void setPersonalNumber(String personalNumber) {
 		this.personalNumber = personalNumber;
 	}
 	
-	public int getPersonalNumber() {
+	public String getPersonalNumber() {
 		return this.personalNumber;
 	}
 	

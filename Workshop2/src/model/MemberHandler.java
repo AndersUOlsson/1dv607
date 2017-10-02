@@ -26,7 +26,7 @@ public class MemberHandler {
 	 * @return	A member of class member.
 	 * @throws IOException 
 	 */
-	public void createMember(String name, int personalNumber) throws IOException {
+	public void createMember(String name, String personalNumber) throws IOException {
 		
 		int memberID = DAO.findMemberID();
 		
@@ -59,7 +59,7 @@ public class MemberHandler {
 		}
 		DAO.writeMembersToXml(memberList);
 	}
-	public void updatePersonalNumber(int id, int number) throws IOException  {
+	public void updatePersonalNumber(int id, String number) throws IOException  {
 		for (Member m: memberList.getMembers()) {
 			if (m.getMemberID() == id) {
 				m.setPersonalNumber(number);
