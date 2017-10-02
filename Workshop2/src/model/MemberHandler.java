@@ -13,7 +13,6 @@ public class MemberHandler {
 	ThejollypirateDAO DAO = new ThejollypirateDAO();
 	MemberList memberList = new MemberList();
 	private boolean nullIndicator = true;
-	IOController scan = new IOController();
 	
 	public MemberHandler() throws IOException {
 		// get members from XML
