@@ -6,7 +6,6 @@ import BlackJack.controller.*;
 
 public class Program
 {
-	//TESTING HELLO
 
   public static void main(String[] a_args)
   {
@@ -14,7 +13,6 @@ public class Program
     Game g = new Game();
     IView v = new SimpleView(); //new SwedishView();
     PlayGame ctrl = new PlayGame();
-    
     while (ctrl.Play(g, v));
   }
 }

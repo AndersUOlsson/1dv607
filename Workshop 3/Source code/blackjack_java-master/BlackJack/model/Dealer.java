@@ -58,4 +58,23 @@ public class Dealer extends Player {
     return false;
   }
   
+  /**
+   * This is when the player wants to stand. 
+   * @return true
+   */
+  public boolean stand() {
+	  
+	  Card c;
+	  
+	  if(this.m_deck != null) {
+		  ShowHand();
+		  
+		  while(this.m_hitRule.DoHit(this)) {
+			  this.m_hitRule.DoHit(this);
+			  c = this.m_deck.GetCard();
+			  DealCard(c);
+		  }
+	  }
+	  return true;
+  }
 }
