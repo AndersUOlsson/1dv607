@@ -71,7 +71,7 @@ public class Dealer extends Player {
 		  
 		  while(this.m_hitRule.DoHit(this)) {
 			  this.m_hitRule.DoHit(this);
-			  c = this.m_deck.GetCard();
+			  c = this.m_deck.GetCard(); // Index out of bounds here, i think the dealer doesn't stop drawing cards
 			  DealCard(c);
 		  }
 	  }

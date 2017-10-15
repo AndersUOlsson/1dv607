@@ -1,0 +1,9 @@
+HOW TO RUN THE THING!!!!
+========================
+
+The .jar should be runnable but for some it seems it isn't. It worked on my linux laptop but not on my windows workstation.
+The .exe is just the .jar packaged for windows, and it SHOULD work. I hope.
+
+We found the jar does not like java 9 for some reason.
+
+Good luck :)

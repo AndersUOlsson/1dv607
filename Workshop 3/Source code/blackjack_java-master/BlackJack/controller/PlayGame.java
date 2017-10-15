@@ -16,21 +16,21 @@ public class PlayGame {
         a_view.DisplayGameOver(a_game.IsDealerWinner());
     }
 
-    int input = a_view.GetInput();
+    IView.Intent input = a_view.getIntent();
     
-    if (input == 'p')
+    if (input == IView.Intent.NewGame)
     {
         a_game.NewGame();
     }
-    else if (input == 'h')
+    else if (input == IView.Intent.Hit)
     {
         a_game.Hit();
     }
-    else if (input == 's')
+    else if (input == IView.Intent.Stand)
     {
         a_game.Stand();
     }
 
-    return input != 'q';
+    return input != IView.Intent.Quit;
   }
 }
