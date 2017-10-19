@@ -2,6 +2,8 @@ package BlackJack.controller;
 
 import BlackJack.view.IView;
 import BlackJack.model.Game;
+import BlackJack.model.Card;
+import BlackJack.model.Card.Value;
 
 public class PlayGame {
 
@@ -24,7 +26,17 @@ public class PlayGame {
     }
     else if (input == IView.Intent.Hit)
     {
-        a_game.Hit();
+        for (Card c : a_game.GetPlayerHand())
+        {
+    		if (c.GetValue() == Value.Ace && a_game.GetPlayerScore() == 17)
+    		{
+    			a_game.Soft17();
+    		} 
+    		else
+    		{
+    			a_game.Hit();
+    		}
+        }    	
     }
     else if (input == IView.Intent.Stand)
     {

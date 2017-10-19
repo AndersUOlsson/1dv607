@@ -41,14 +41,28 @@ public class Dealer extends Player {
     }
     return false;
   }
+  
+  public boolean Soft17(Player a_player) {
+	    if (m_deck != null && a_player.CalcScore() == g_soft17Score && !IsGameOver()) 
+	    {
+	      Card c;
+	      c = m_deck.GetCard();
+	      c.Show(true);
+	      a_player.DealCard(c);	      
+	      return true;
+	    }
+	    return false;
+	  }
 
   public boolean IsDealerWinner(Player a_player) {
     if (a_player.CalcScore() > g_maxScore) {
       return true;
     } else if (CalcScore() > g_maxScore) {
       return false;
+    } else if (CalcScore() == a_player.CalcScore()) {
+      return false;
     }
-    return CalcScore() >= a_player.CalcScore();
+    return CalcScore() > a_player.CalcScore();
   }
 
   public boolean IsGameOver() {

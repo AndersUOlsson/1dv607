@@ -32,9 +32,13 @@ public class Game {
     return m_dealer.Hit(m_player);
   }
   
+  public boolean Soft17()
+  {
+	  return m_dealer.Soft17(m_player);
+  }
+  
   public boolean Stand()
   {
-//	  Implemented by the sequence diagram I think.
     return m_dealer.stand();
   }
   

@@ -7,6 +7,7 @@ public class Player {
 
   private List<Card> m_hand;
   protected final int g_maxScore = 21;
+  protected final int g_soft17Score = 17;
 
   public Player()
   {
@@ -40,7 +41,7 @@ public class Player {
   
   public int CalcScore()
   {
-    // the number of scores is dependant on the number of scorable values
+    // the number of scores is dependent on the number of scorable values
     // as it seems there is no way to do this check at compile time in java ?!
     // cardScores[13] = {...};
     int cardScores[] = {
