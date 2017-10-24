@@ -35,8 +35,7 @@ public class Dealer extends Player {
       Card c;
       c = m_deck.GetCard();
       c.Show(true);
-//      a_player.DealCard(c);
-      DealCard(c);
+      a_player.DealCard(c);
       return true;
     }
     return false;
@@ -81,10 +80,8 @@ public class Dealer extends Player {
 	  Card c;
 	  
 	  if(this.m_deck != null) {
-		  ShowHand();
-		  
+		  this.ShowHand();
 		  while(this.m_hitRule.DoHit(this)) {
-			  
 			  c = this.m_deck.GetCard();
 			  c.Show(true);
 			  DealCard(c);

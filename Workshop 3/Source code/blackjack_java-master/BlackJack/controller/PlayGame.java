@@ -26,17 +26,7 @@ public class PlayGame {
     }
     else if (input == IView.Intent.Hit)
     {
-        for (Card c : a_game.GetPlayerHand())
-        {
-    		if (c.GetValue() == Value.Ace && a_game.GetPlayerScore() == 17)
-    		{
-    			a_game.Soft17();
-    		} 
-    		else
-    		{
-    			a_game.Hit();
-    		}
-        }    	
+        a_game.Hit();
     }
     else if (input == IView.Intent.Stand)
     {
