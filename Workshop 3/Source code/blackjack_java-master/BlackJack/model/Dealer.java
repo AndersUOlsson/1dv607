@@ -35,8 +35,8 @@ public class Dealer extends Player {
       Card c;
       c = m_deck.GetCard();
       c.Show(true);
-      a_player.DealCard(c);
-      
+//      a_player.DealCard(c);
+      DealCard(c);
       return true;
     }
     return false;
@@ -84,8 +84,9 @@ public class Dealer extends Player {
 		  ShowHand();
 		  
 		  while(this.m_hitRule.DoHit(this)) {
-			  this.m_hitRule.DoHit(this);
-			  c = this.m_deck.GetCard(); // Index out of bounds here, i think the dealer doesn't stop drawing cards
+			  
+			  c = this.m_deck.GetCard();
+			  c.Show(true);
 			  DealCard(c);
 		  }
 	  }
