@@ -1,6 +1,10 @@
 package BlackJack.view;
 
-public class SimpleView implements IView {
+public class SimpleView extends Observer implements IView {
+	
+	public void event() {
+		System.out.println("EVENT YES");
+	}
 	
 	public void DisplayWelcomeMessage() {
 		for (int i = 0; i < 50; i++) {
@@ -18,7 +22,7 @@ public class SimpleView implements IView {
 			}
 			return c;
 		} catch (java.io.IOException e) {
-			System.out.println("" + e);
+			System.out.println(e);
 			return 0;
 		}
 	}
