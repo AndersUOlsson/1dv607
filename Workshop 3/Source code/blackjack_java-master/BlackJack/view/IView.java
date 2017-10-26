@@ -13,6 +13,8 @@ public interface IView {
 	
 	void DisplayGameOver(boolean a_dealerIsWinner);
 	
+	void fillRows();
+	
 	public enum Intent {
 		NewGame, Hit, Stand, Quit;
 	}

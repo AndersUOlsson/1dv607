@@ -14,7 +14,6 @@ public class Dealer extends Player {
 	private ArrayList<Observer> observers = new ArrayList<>();
 	
 	public void notifyObservers() {
-		System.out.println("Notifier");
 		for (Observer o : observers) {
 			o.event();
 		}
@@ -31,7 +30,6 @@ public class Dealer extends Player {
 	
 	public void giveCardToPlayer(Player a_player) {
 		giveCardToPlayer(a_player, true);
-		this.notifyObservers();
 	}
 	public void giveCardToPlayer(Player a_player, boolean a_shown) {
 		Card c = m_deck.GetCard();
@@ -82,7 +80,6 @@ public class Dealer extends Player {
 	 * @return true
 	 */
 	public boolean stand() {
-		
 		Card c;
 		
 		if (this.m_deck != null) {

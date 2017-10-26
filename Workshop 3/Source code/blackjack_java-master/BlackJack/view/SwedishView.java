@@ -24,6 +24,12 @@ public class SwedishView implements IView {
 			return 0;
 		}
 	}
+
+	public void fillRows() {
+		for (int i = 0; i < 50; i++) {
+			System.out.print("\n");
+		}
+	}
 	
 	public IView.Intent getIntent() {
 		int userInput = this.GetInput();

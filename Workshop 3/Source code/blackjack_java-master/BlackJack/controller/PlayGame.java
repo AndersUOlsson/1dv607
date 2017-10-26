@@ -41,13 +41,13 @@ public class PlayGame extends Observer {
 	}
 	
 	public void event() {
-		m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
-		m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
 		try {
-			TimeUnit.SECONDS.sleep(8);
+			TimeUnit.SECONDS.sleep(2);
 		} catch (Exception e) {
 		
 		}
-		System.out.println("AHAHA");
+		m_view.fillRows();
+		m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+		m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
 	}
 }
