@@ -31,6 +31,7 @@ public class Dealer extends Player {
 	
 	public void giveCardToPlayer(Player a_player) {
 		giveCardToPlayer(a_player, true);
+		this.notifyObservers();
 	}
 	public void giveCardToPlayer(Player a_player, boolean a_shown) {
 		Card c = m_deck.GetCard();
