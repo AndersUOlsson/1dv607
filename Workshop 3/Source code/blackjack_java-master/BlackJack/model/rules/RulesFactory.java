@@ -13,4 +13,8 @@ public class RulesFactory {
 	public IHitStrategy GetSoft17Rule() {
 		return new Soft17HitStrategy();
 	}
+	
+	public IWinTheGameStrategy GetWinRule() {
+		return new StandardWinTheGameStrategy();
+	}
 }
