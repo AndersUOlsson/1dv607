@@ -1,4 +1,4 @@
-package BlackJack.view;
+package BlackJack.controller;
 
 import BlackJack.model.Dealer;
 

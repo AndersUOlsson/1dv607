@@ -1,7 +1,7 @@
 package BlackJack.model;
 
 import BlackJack.model.rules.*;
-import BlackJack.view.Observer;
+import BlackJack.controller.Observer;
 
 import java.util.ArrayList;
 
@@ -14,9 +14,14 @@ public class Dealer extends Player {
 	private ArrayList<Observer> observers = new ArrayList<>();
 	
 	public void notifyObservers() {
+		System.out.println("Notifier");
 		for (Observer o : observers) {
 			o.event();
 		}
+	}
+	
+	public void addObserver(Observer o) {
+		this.observers.add(o);
 	}
 	
 	public Dealer(RulesFactory a_rulesFactory) {
@@ -31,6 +36,7 @@ public class Dealer extends Player {
 		Card c = m_deck.GetCard();
 		c.Show(a_shown);
 		a_player.DealCard(c);
+		this.notifyObservers();
 	}
 	
 	public boolean NewGame(Player a_player) {

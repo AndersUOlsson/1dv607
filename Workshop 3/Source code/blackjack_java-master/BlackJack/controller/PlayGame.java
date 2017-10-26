@@ -5,34 +5,49 @@ import BlackJack.model.Game;
 import BlackJack.model.Card;
 import BlackJack.model.Card.Value;
 
-public class PlayGame {
+import java.util.concurrent.TimeUnit;
 
-  public boolean Play(Game a_game, IView a_view) {
-    a_view.DisplayWelcomeMessage();
-    
-    a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-    a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
-
-    if (a_game.IsGameOver())
-    {
-        a_view.DisplayGameOver(a_game.IsDealerWinner());
-    }
-
-    IView.Intent input = a_view.getIntent();
-    
-    if (input == IView.Intent.NewGame)
-    {
-        a_game.NewGame();
-    }
-    else if (input == IView.Intent.Hit)
-    {
-        a_game.Hit();
-    }
-    else if (input == IView.Intent.Stand)
-    {
-        a_game.Stand();
-    }
-
-    return input != IView.Intent.Quit;
-  }
+public class PlayGame extends Observer {
+	
+	Game m_game;
+	IView m_view;
+	
+	public PlayGame(Game a_game, IView a_view) {
+		this.m_game = a_game;
+		this.m_view = a_view;
+		m_game.getDealer().addObserver(this);
+	}
+	
+	public boolean Play() {
+		m_view.DisplayWelcomeMessage();
+		
+		m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+		m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
+		
+		if (m_game.IsGameOver()) {
+			m_view.DisplayGameOver(m_game.IsDealerWinner());
+		}
+		
+		IView.Intent input = m_view.getIntent();
+		
+		if (input == IView.Intent.NewGame) {
+			m_game.NewGame();
+		} else if (input == IView.Intent.Hit) {
+			m_game.Hit();
+		} else if (input == IView.Intent.Stand) {
+			m_game.Stand();
+		}
+		return input != IView.Intent.Quit;
+	}
+	
+	public void event() {
+		m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+		m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
+		try {
+			TimeUnit.SECONDS.sleep(8);
+		} catch (Exception e) {
+		
+		}
+		System.out.println("AHAHA");
+	}
 }

@@ -47,5 +47,7 @@ public class Game {
 		return m_player.CalcScore();
 	}
 	
+	public Dealer getDealer() { return this.m_dealer; }
+	
 	
 }

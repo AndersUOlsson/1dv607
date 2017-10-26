@@ -1,5 +1,7 @@
 package BlackJack.view;
 
+import BlackJack.controller.Observer;
+
 public class SimpleView extends Observer implements IView {
 	
 	public void event() {
