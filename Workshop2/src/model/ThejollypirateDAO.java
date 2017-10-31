@@ -13,68 +13,56 @@ public class ThejollypirateDAO {
 	
 	MemberList members;
 	String fileLocation = "members.xml";
+	static int maxId = 0;
 	
 	/**
-	 * Write members list to XML 
+	 * Write members list to XML
+	 *
 	 * @throws IOException printStackTrace
 	 */
 	public void writeMembersToXml(MemberList members) throws IOException {
 		
 		try {
-
+			
 			JAXBContext context = JAXBContext.newInstance(MemberList.class);
-	        Marshaller marshaller = context.createMarshaller();
-	                   marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-	                   
-//	                   Write members to XML file.
-	                   marshaller.marshal(members, new FileWriter(fileLocation));
-		}
-		catch (JAXBException e) {
+			Marshaller marshaller = context.createMarshaller();
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			
+			//	                   Write members to XML file.
+			marshaller.marshal(members, new FileWriter(fileLocation));
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 	}
 	
 	/**
 	 * Loads members list from XML.
+	 *
 	 * @return a list of all the members in the XML.
 	 */
 	public MemberList loadMembersFromXml() {
 		MemberList members = null;
 		
-		try { 
+		try {
 			
 			File file = new File(fileLocation);
-	 
+			
 			JAXBContext jaxbContext = JAXBContext.newInstance(MemberList.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-//			Read from file.
-			members = (MemberList)jaxbUnmarshaller.unmarshal(file);
-		}
-		catch(JAXBException e) {
+			//			Read from file.
+			members = (MemberList) jaxbUnmarshaller.unmarshal(file);
+		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 		return members;
 	}
-
+	
 	/**
 	 * Finding the highest memberID in the system.
+	 *
 	 * @return highest memberID plus 1.
 	 */
 	public int findMemberID() {
-		
-		int highestMemberID = 0;
-		try {
-			for(int i = 0; i < loadMembersFromXml().getMembers().size(); i++) {
-				int usedMemberIDs = loadMembersFromXml().getMembers().get(i).getMemberID();
-				if(usedMemberIDs > highestMemberID) {
-					highestMemberID = usedMemberIDs;
-		
-				}
-			}
-		}
-		catch(NullPointerException e) {}
-		
-		highestMemberID++;
-		return highestMemberID;
+		return ++ maxId;
 	}
 }

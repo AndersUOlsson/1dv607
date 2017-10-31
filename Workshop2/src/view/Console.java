@@ -1,16 +1,12 @@
 package view;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
 
 import model.Boat;
 import model.Boat.Type;
-import model.BoatHandler;
 import model.Member;
 import model.MemberHandler;
-import model.MemberList;
-import model.ThejollypirateDAO;
 
 public class Console {
 	private IOController userInput;
@@ -43,10 +39,10 @@ public class Console {
 			choice = userInput.intInput();
 			switch (choice) {
 				case 1:
-					verboseList(user.getMembers());
+					verboseList(user.getMemberIterator());
 					break;
 				case 2:
-					compactList(user.getMembers());
+					compactList(user.getMemberIterator());
 					break;
 				case 3:
 					viewUser();
@@ -73,7 +69,7 @@ public class Console {
 	
 	
 	public void deleteMemberWindow() throws IOException {
-		compactList(user.getMembers());
+		compactList(user.getMemberIterator());
 		System.out.print("\nWhat is the ID of the member you want to delete? \n");
 		int numberIDtoDelete = userInput.intInput();
 		user.deleteMember(numberIDtoDelete);
@@ -87,19 +83,17 @@ public class Console {
 	}
 	
 	public void changeMemberWindow() throws IOException {
-		compactList(user.getMembers());
 		System.out.print("\nWhat is the memberID of the member you want to change?");
 		
 		int memberID = userInput.intInput();		
 		int userChoice;
-		Member member = new Member();						
-		for (int i = 0; i < user.getMembers().size(); i++) {
-			if (user.getMembers().get(i).getMemberID() == memberID) {
-				member = user.getMembers().get(i);															
-			}												
+		Member member  = user.getSpecificMember(memberID);
+		if (member == null) {
+			System.out.println("That user does not exist in our records, kind sir. Would you please care to try again?");
+			return;
 		}
 		do {
-			System.out.print("\nWhat do you like to change ?\n" + "1. name?\n" + "2. Personal number?\n" + "3. Boat information?\n" + "4. Done, go back.");
+			System.out.print("\nWhat do you like to change ?\n" + "1. Name?\n" + "2. Personal number?\n" + "3. Boat information?\n" + "4. Done, go back.");
 			userChoice = userInput.intInput();
 			if (userChoice == 1) {
 				String newName = userInput.stringInput("New name");
@@ -117,7 +111,7 @@ public class Console {
 						// add boat
 						
 						do {
-							System.out.println("Select boat type:\n(1) Sail boat\n(2) Motor sailer\n(3)Canoe/kayak\n(4)Other");
+							System.out.println("Select boat type:\n(1) Sail boat\n(2) Motor sailer\n(3) Canoe/kayak\n(4) Other");
 							boatChoice = userInput.intInput();
 						} while (boatChoice < 1 || boatChoice > 4);
 						
@@ -144,12 +138,12 @@ public class Console {
 						System.out.println("\n" + member.getName() + "'s boats:");
 						for (int j = 0; j < member.getBoats().size(); j++)
 						{
-							System.out.println((j +1) + ". " + member.getBoats().get(j).getType().toString());
+							System.out.println((j +1) + ". " + getBoatTypeName(member.getBoats().get(j).getType()));
 						}
 						System.out.println("\nWhat is the number of the boat whose details you wish to modify?");
 						int boatIndex = userInput.intInput();
 						Boat boat = member.getBoats().get(boatIndex -1);
-						System.out.println("\n1. Boat Type: " + boat.getType().toString() + "\n2. Boat Length: " + boat.getLength() + "\n\nWhat information would you like to modify?" );
+						System.out.println("\n1. Boat Type: " + getBoatTypeName(boat.getType()) + "\n2. Boat Length: " + boat.getLength() + "\n\nWhat information would you like to modify?" );
 						int infoIndex = userInput.intInput();						
 						if (infoIndex == 1)
 						{
@@ -186,17 +180,17 @@ public class Console {
 						System.out.println(member.getName() + "'s boats: ");
 						for (int j = 0; j < member.getBoats().size(); j++)
 						{
-							System.out.println((j +1) + ". " + member.getBoats().get(j).getType().toString());
+							System.out.println((j +1) + ". " + getBoatTypeName(member.getBoats().get(j).getType()));
 						}
 						System.out.println("\nWhat is the number of the boat you want to delete?");
 						int boatIndex = userInput.intInput();
-						BoatHandler.removeBoat(member, boatIndex-1);
+						member.removeBoat( boatIndex-1);
 						if (boatNum == member.getNumberOfBoats() +1)
 						{
 							System.out.println("Boat Successfully deleted." + member.getName() + "'s current boats: ");
 							for (int j = 0; j < member.getBoats().size(); j++)
 							{
-								System.out.println((j +1) + ". " + member.getBoats().get(j).getType().toString());
+								System.out.println((j +1) + ". " + getBoatTypeName(member.getBoats().get(j).getType()));
 							}
 						}
 						else
@@ -210,27 +204,26 @@ public class Console {
 		} while (userChoice != 4);
 	}
 	
-	public void optionChangeMemberWindow() {
 	
-	}
-	
-	
-	public void compactList(List<Member> members) {
+	public void compactList(Iterator<Member> members) {
+		
 		System.out.printf("%-4s %-30s %-4s%n%n", "ID", "Name", "Boats");
-		for (Member m : members) {
+		while (members.hasNext()) {
+			Member m = members.next();
 			this.printCompactInfo(m);
 		}
 	}
 	
-	public void verboseList(List<Member> members) {
+	public void verboseList(Iterator<Member>  members) {
 		System.out.printf("%-4s %-30s %-12s %-4s%n%n", "ID", "Name", "P.Number", "Boats");
-		for (Member m : members) {
+		while (members.hasNext()) {
+			Member m = members.next();
 			this.printInfo(m); // User info, yas
 			// now lets do their boats
 			if (m.getBoats().size() >0 )
 				System.out.printf("     %-20s %10s%n", "Type", "Length (m)");
 			for (model.Boat b : m.getBoats()) {
-				System.out.printf("     %-20s %10.0f%n", b.getType().toString(), b.getLength());
+				System.out.printf("     %-20s %10.0f%n", getBoatTypeName(b.getType()), b.getLength());
 			}
 			System.out.println("");
 		}
@@ -244,20 +237,21 @@ public class Console {
 	}
 	
 	private void viewUser() {
-		compactList(user.getMembers());
 		System.out.print("\nWhat is the memberID of the member you want to view?");
 		
 		int memberID = userInput.intInput();
-		for (Member m: user.getMembers()) {
-			if (m.getMemberID() == memberID) {
-				System.out.printf("%-4s %-30s %-12s %-4s%n%n", "ID", "Name", "P.Number", "Boats");
-				printInfo(m);
-				if (m.getBoats().size() >0 )
-					System.out.printf("     %-20s %10s%n", "Type", "Length (m)");
-				for (model.Boat b : m.getBoats()) {
-					System.out.printf("     %-20s %10.0f%n", b.getType().toString(), b.getLength());
-				}
-			}
+		Member m = user.getSpecificMember(memberID);
+		if (m == null) {
+			System.out.println("That user does not exist in our records, kind sir. Would you please care to try again?");
+			return;
+		}
+		
+		System.out.printf("%-4s %-30s %-12s %-4s%n%n", "ID", "Name", "P.Number", "Boats");
+		printInfo(m);
+		if (m.getBoats().size() >0 )
+			System.out.printf("     %-20s %10s%n", "Type", "Length (m)");
+		for (model.Boat b : m.getBoats()) {
+			System.out.printf("     %-20s %10.0f%n", getBoatTypeName(b.getType()), b.getLength());
 		}
 		
 	}
@@ -271,6 +265,20 @@ public class Console {
 			}
 		} while (!personalNumber.matches("([0-9]+)"));
 		return personalNumber;
+	}
+	
+	
+	private String getBoatTypeName(Boat.Type type) {
+		switch (type) {
+			case CANOE:
+				return "Canoe/Kayak";
+			case SAILBOAT:
+				return "Sail Boat";
+			case MOTORSAILER:
+				return "Motor Sailer";
+			default:
+				return "Other";
+		}
 	}
 	
 	

@@ -11,7 +11,7 @@ public class Member implements IMembers {
 	private String personalNumber;
 	private int memberID;
 	
-	List<Boat> boats = new ArrayList<>();
+	private List<Boat> boats = new ArrayList<>();
 	
 	public Member() {
 	}
@@ -63,7 +63,24 @@ public class Member implements IMembers {
 		this.boats = boatsn;
 	}
 	
+	// Boat stuff
 	public int getNumberOfBoats() {
 		return this.boats.size();
 	}
+	
+	public void addBoat(Boat.Type t, double l) {
+		Boat b = new Boat(t, l);
+		this.addBoat(b);
+	}
+	
+	public void removeBoat(int index) {
+		boats.remove(index);
+	}
+	
+	public void updateBoat(int index, Boat.Type t, double l) {
+		boats.get(index).setLength(l);
+		boats.get(index).setType(t);
+		
+	}
+	
 }

@@ -10,19 +10,10 @@ public class Boat {
 	private Type type;
 	
 	public enum Type {
-		SAILBOAT("Sailboat"),
-		MOTORSAILER("Motor sailer"),
-		CANOE("Canoe/cayak"),
-		OTHER("Other");
-		
-		private final String readable;
-		private Type(String rin) {
-			readable = rin;
-		}
-		@Override
-		public String toString() {
-			return readable;
-		}
+		SAILBOAT,
+		MOTORSAILER,
+		CANOE,
+		OTHER;
 	}
 	
 	public Boat(Type t, double l) {
@@ -43,7 +34,7 @@ public class Boat {
 		return this.length;
 	}
 	public void setType(Type type) {
-		this.type = type; // dont need error checking here, right?
+		this.type = type; // don't need error checking here, right?
 		                  // should be impossible to send in an erroneous Type
 	}
 	public void setLength(double len) {
