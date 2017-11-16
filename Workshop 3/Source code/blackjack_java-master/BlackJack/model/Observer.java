@@ -1,6 +1,4 @@
-package BlackJack.controller;
-
-import BlackJack.model.Dealer;
+package BlackJack.model;
 
 /**
  * Created by Mushra on 2017-10-24.

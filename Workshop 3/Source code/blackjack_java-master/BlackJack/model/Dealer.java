@@ -1,7 +1,6 @@
 package BlackJack.model;
 
 import BlackJack.model.rules.*;
-import BlackJack.controller.Observer;
 
 import java.util.ArrayList;
 

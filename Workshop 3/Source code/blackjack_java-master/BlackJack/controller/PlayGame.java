@@ -2,6 +2,7 @@ package BlackJack.controller;
 
 import BlackJack.view.IView;
 import BlackJack.model.Game;
+import BlackJack.model.Observer;
 import BlackJack.model.Card;
 import BlackJack.model.Card.Value;
 
