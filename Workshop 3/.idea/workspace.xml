@@ -7,28 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb8ede3-a443-487e-b1a1-d96e59501a4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/Program.class" afterPath="$PROJECT_DIR$/bin/BlackJack/Program.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/controller/PlayGame.class" afterPath="$PROJECT_DIR$/bin/BlackJack/controller/PlayGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/Card$Color.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/Card$Color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/Card$Value.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/Card$Value.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/Card.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/Card.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/Dealer.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/Dealer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/Game.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/Player.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/rules/AmericanNewGameStrategy.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/rules/AmericanNewGameStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/rules/ISoft17HitStrategy.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/rules/ISoft17HitStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/rules/RulesFactory.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/rules/RulesFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/model/rules/Soft17HitStrategy.class" afterPath="$PROJECT_DIR$/bin/BlackJack/model/rules/Soft17HitStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/view/IView$Intent.class" afterPath="$PROJECT_DIR$/bin/BlackJack/view/IView$Intent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/view/IView.class" afterPath="$PROJECT_DIR$/bin/BlackJack/view/IView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/view/SimpleView.class" afterPath="$PROJECT_DIR$/bin/BlackJack/view/SimpleView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/BlackJack/view/SwedishView.class" afterPath="$PROJECT_DIR$/bin/BlackJack/view/SwedishView.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AnotherWinTheGameStrategy.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Workshop 3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/class diagram.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/controller/PlayGame.java" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/controller/PlayGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/IView.java" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/IView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SimpleView.java" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SimpleView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SwedishView.java" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SwedishView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java" afterPath="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,36 +30,54 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Game.java">
+      <file leaf-file-name="IWinTheGameStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/IWinTheGameStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java">
+      <file leaf-file-name="StandardWinTheGameStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/StandardWinTheGameStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Soft17HitStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/Soft17HitStrategy.java">
+      <file leaf-file-name="AnotherWinTheGameStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AnotherWinTheGameStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RulesFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dealer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="614">
+              <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
               <folding>
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#246#247#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <marker date="1510852308451" expanded="true" signature="1509:1514" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -91,21 +93,33 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="InternationalNewGameStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/InternationalNewGameStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SimpleView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SimpleView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
-                <element signature="e#147#148#0" expanded="true" />
-                <element signature="e#185#186#0" expanded="true" />
-                <marker date="1509037464440" expanded="true" signature="504:704" ph="{...}" />
-                <marker date="1509037464440" expanded="true" signature="740:985" ph="{...}" />
-                <marker date="1509037464440" expanded="true" signature="1044:1123" ph="{...}" />
-                <marker date="1509037464440" expanded="true" signature="1209:1255" ph="{...}" />
-                <marker date="1509037464440" expanded="true" signature="1341:1387" ph="{...}" />
-                <marker date="1509037464440" expanded="true" signature="1483:1662" ph="{...}" />
-                <marker date="1509037464440" expanded="true" signature="1720:1877" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="92:97" ph=" { " />
+                <marker date="1510848188853" expanded="true" signature="129:132" ph=" }" />
+                <marker date="1510848188853" expanded="true" signature="172:328" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="355:423" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="450:650" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="686:931" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="990:1069" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="1155:1201" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="1287:1333" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="1429:1608" ph="{...}" />
+                <marker date="1510848188853" expanded="true" signature="1666:1823" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -115,35 +129,12 @@
         <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/controller/PlayGame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwedishView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SwedishView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="59" lean-forward="false" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+              <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
-                <marker date="1509037460528" expanded="true" signature="754:999" ph="{...}" />
-                <marker date="1509037460528" expanded="true" signature="1056:1466" ph="{...}" />
-                <marker date="1509037460528" expanded="true" signature="1552:1599" ph="{...}" />
-                <marker date="1509037460528" expanded="true" signature="1685:1733" ph="{...}" />
-                <marker date="1509037460528" expanded="true" signature="1791:1945" ph="{...}" />
-                <marker date="1509037460528" expanded="true" signature="2041:2230" ph="{...}" />
+                <marker date="1510848188834" expanded="true" signature="344:436" ph="{...}" />
+                <marker date="1510848188834" expanded="true" signature="462:1017" ph="{...}" />
+                <marker date="1510848188834" expanded="true" signature="1041:1291" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Observer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/controller/Observer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -181,7 +172,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Card.java" />
-        <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java" />
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SwedishView.java" />
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Player.java" />
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SimpleView.java" />
@@ -194,6 +184,8 @@
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/controller/PlayGame.java" />
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AmericanNewGameStrategy.java" />
         <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java" />
+        <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AnotherWinTheGameStrategy.java" />
+        <option value="$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java" />
       </list>
     </option>
   </component>
@@ -355,6 +347,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -489,37 +484,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workshop 3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workshop 3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Source code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blackjack_java-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BlackJack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -976,7 +942,10 @@
       <workItem from="1508494527770" duration="741000" />
       <workItem from="1508844765226" duration="15849000" />
       <workItem from="1509032036735" duration="4313000" />
-      <workItem from="1509037833642" duration="174000" />
+      <workItem from="1509037833642" duration="539000" />
+      <workItem from="1509043186920" duration="231000" />
+      <workItem from="1509126736216" duration="92000" />
+      <workItem from="1510852227144" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="Some fixes">
       <created>1508847939340</created>
@@ -999,11 +968,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509034163423</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hit it">
+      <created>1509038052582</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1509038052582</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29347000" />
+    <option name="totallyTimeSpent" value="31286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
@@ -1024,7 +1000,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19804402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20537898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1084,7 +1060,8 @@
     <MESSAGE value="Some fixes" />
     <MESSAGE value="Before muddying it" />
     <MESSAGE value="Added observer in controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added observer in controller" />
+    <MESSAGE value="hit it" />
+    <option name="LAST_COMMIT_MESSAGE" value="hit it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1097,60 +1074,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="10" lean-forward="false" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/Soft17HitStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/IView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,15 +1086,17 @@
         <state relative-caret-position="306">
           <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <marker date="1509037464440" expanded="true" signature="504:704" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="740:985" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1044:1123" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1209:1255" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1341:1387" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1483:1662" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1720:1877" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="92:97" ph=" { " />
+            <marker date="1510848188853" expanded="true" signature="129:132" ph=" }" />
+            <marker date="1510848188853" expanded="true" signature="172:328" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="355:423" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="450:650" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="686:931" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="990:1069" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1155:1201" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1287:1333" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1429:1608" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1666:1823" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1176,7 +1105,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1510848188834" expanded="true" signature="344:436" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="462:1017" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="1041:1291" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,14 +1117,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-          <folding>
-            <marker date="1509037460528" expanded="true" signature="754:999" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1056:1466" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1552:1599" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1685:1733" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1791:1945" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="2041:2230" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,7 +1125,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,7 +1149,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="32" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,6 +1162,7 @@
           <caret line="73" column="115" lean-forward="false" selection-start-line="73" selection-start-column="115" selection-end-line="73" selection-end-column="115" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1510852308451" expanded="true" signature="1509:1514" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1243,7 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,15 +1179,17 @@
         <state relative-caret-position="425">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <marker date="1509037464440" expanded="true" signature="504:704" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="740:985" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1044:1123" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1209:1255" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1341:1387" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1483:1662" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1720:1877" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="92:97" ph=" { " />
+            <marker date="1510848188853" expanded="true" signature="129:132" ph=" }" />
+            <marker date="1510848188853" expanded="true" signature="172:328" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="355:423" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="450:650" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="686:931" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="990:1069" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1155:1201" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1287:1333" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1429:1608" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1666:1823" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1269,14 +1198,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <marker date="1509037460528" expanded="true" signature="754:999" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1056:1466" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1552:1599" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1685:1733" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1791:1945" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="2041:2230" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1284,7 +1206,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1510848188834" expanded="true" signature="344:436" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="462:1017" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="1041:1291" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1292,7 +1218,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="32" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1309,15 +1237,17 @@
         <state relative-caret-position="425">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <marker date="1509037464440" expanded="true" signature="504:704" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="740:985" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1044:1123" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1209:1255" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1341:1387" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1483:1662" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1720:1877" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="92:97" ph=" { " />
+            <marker date="1510848188853" expanded="true" signature="129:132" ph=" }" />
+            <marker date="1510848188853" expanded="true" signature="172:328" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="355:423" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="450:650" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="686:931" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="990:1069" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1155:1201" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1287:1333" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1429:1608" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1666:1823" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1326,14 +1256,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <marker date="1509037460528" expanded="true" signature="754:999" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1056:1466" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1552:1599" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1685:1733" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1791:1945" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="2041:2230" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1341,7 +1264,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding />
+          <folding>
+            <marker date="1510848188834" expanded="true" signature="344:436" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="462:1017" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="1041:1291" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1351,6 +1278,7 @@
           <caret line="73" column="115" lean-forward="false" selection-start-line="73" selection-start-column="115" selection-end-line="73" selection-end-column="115" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1510852308451" expanded="true" signature="1509:1514" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1359,7 +1287,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="32" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1368,15 +1299,17 @@
         <state relative-caret-position="272">
           <caret line="16" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <marker date="1509037464440" expanded="true" signature="504:704" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="740:985" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1044:1123" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1209:1255" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1341:1387" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1483:1662" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1720:1877" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="92:97" ph=" { " />
+            <marker date="1510848188853" expanded="true" signature="129:132" ph=" }" />
+            <marker date="1510848188853" expanded="true" signature="172:328" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="355:423" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="450:650" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="686:931" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="990:1069" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1155:1201" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1287:1333" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1429:1608" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1666:1823" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1385,7 +1318,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
+          <folding>
+            <marker date="1510848188834" expanded="true" signature="344:436" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="462:1017" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="1041:1291" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,6 +1332,7 @@
           <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1510852308451" expanded="true" signature="1509:1514" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1403,7 +1341,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1427,25 +1368,12 @@
           <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="18" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1510852308451" expanded="true" signature="1509:1514" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/ISoft17HitStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/InternationalNewGameStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/ISoft17HitStrategy.java" />
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/IHitStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1467,13 +1395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1485,7 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1493,7 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1501,15 +1420,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1517,14 +1438,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="59" lean-forward="false" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-          <folding>
-            <marker date="1509037460528" expanded="true" signature="754:999" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1056:1466" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1552:1599" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1685:1733" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="1791:1945" ph="{...}" />
-            <marker date="1509037460528" expanded="true" signature="2041:2230" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,7 +1446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,28 +1460,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AmericanNewGameStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/view/SimpleView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <marker date="1509037464440" expanded="true" signature="504:704" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="740:985" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1044:1123" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1209:1255" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1341:1387" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1483:1662" ph="{...}" />
-            <marker date="1509037464440" expanded="true" signature="1720:1877" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="92:97" ph=" { " />
+            <marker date="1510848188853" expanded="true" signature="129:132" ph=" }" />
+            <marker date="1510848188853" expanded="true" signature="172:328" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="355:423" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="450:650" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="686:931" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="990:1069" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1155:1201" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1287:1333" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1429:1608" ph="{...}" />
+            <marker date="1510848188853" expanded="true" signature="1666:1823" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1586,18 +1493,240 @@
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/controller/PlayGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="38" column="9" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <marker date="1510848188834" expanded="true" signature="344:436" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="462:1017" ph="{...}" />
+            <marker date="1510848188834" expanded="true" signature="1041:1291" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/temp/git.uml/1dv607/Workshop 3/Source code">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/Source code</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/BlackJack">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>BlackJack</OriginalElement>
+          <nodes>
+            <node x="117.54062499999995" y="267.0">BlackJack.view.IView</node>
+            <node x="277.415625" y="178.0">BlackJack.model.Dealer</node>
+            <node x="135.99999999999997" y="346.0">BlackJack.view.SimpleView</node>
+            <node x="252.29062499999995" y="79.0">BlackJack.model.Deck</node>
+            <node x="490.290625" y="79.0">BlackJack.model.Player</node>
+            <node x="429.54166666666663" y="267.0">BlackJack.model.Game</node>
+            <node x="298.9661458333333" y="425.0">BlackJack.Program</node>
+            <node x="285.0536458333333" y="0.0">BlackJack.model.Card</node>
+            <node x="265.0" y="346.0">BlackJack.controller.PlayGame</node>
+            <node x="366.290625" y="79.0">BlackJack.model.rules</node>
+            <node x="244.24999999999997" y="267.0">BlackJack.controller.Observer</node>
+            <node x="0.0" y="346.0">BlackJack.view.SwedishView</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="BlackJack.controller.PlayGame" target="BlackJack.view.IView">
+              <point x="-33.66666666666663" y="-14.5" />
+              <point x="281.83333333333337" y="316.0" />
+              <point x="180.8739583333333" y="316.0" />
+              <point x="25.333333333333343" y="14.5" />
+            </edge>
+            <edge source="BlackJack.view.SwedishView" target="BlackJack.view.IView">
+              <point x="0.0" y="-14.5" />
+              <point x="58.0" y="326.0" />
+              <point x="130.2072916666666" y="326.0" />
+              <point x="-25.333333333333343" y="14.5" />
+            </edge>
+            <edge source="BlackJack.Program" target="BlackJack.controller.PlayGame">
+              <point x="0.0" y="-14.5" />
+              <point x="345.9661458333333" y="395.0" />
+              <point x="315.5" y="395.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Player" target="BlackJack.model.Card">
+              <point x="0.0" y="-14.5" />
+              <point x="530.290625" y="54.0" />
+              <point x="345.8869791666666" y="54.0" />
+              <point x="24.333333333333314" y="14.5" />
+            </edge>
+            <edge source="BlackJack.controller.PlayGame" target="BlackJack.controller.Observer">
+              <point x="0.0" y="-14.5" />
+              <point x="23.75" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.rules" target="BlackJack.model.rules">
+              <point x="-34.666666666666664" y="14.5" />
+              <point x="383.6239583333333" y="128.0" />
+              <point x="346.290625" y="128.0" />
+              <point x="346.290625" y="93.5" />
+              <point x="-52.0" y="-0.0" />
+            </edge>
+            <edge source="BlackJack.Program" target="BlackJack.model.Game">
+              <point x="31.333333333333314" y="-14.5" />
+              <point x="377.29947916666663" y="405.0" />
+              <point x="488.79166666666663" y="405.0" />
+              <point x="19.75" y="14.5" />
+            </edge>
+            <edge source="BlackJack.view.SimpleView" target="BlackJack.controller.Observer">
+              <point x="27.25" y="-14.5" />
+              <point x="217.74999999999997" y="326.0" />
+              <point x="268.0" y="326.0" />
+              <point x="-23.75" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Game" target="BlackJack.model.rules">
+              <point x="0.0" y="-14.5" />
+              <point x="469.04166666666663" y="227.0" />
+              <point x="452.9572916666666" y="227.0" />
+              <point x="34.66666666666663" y="14.5" />
+            </edge>
+            <edge source="BlackJack.controller.Observer" target="BlackJack.model.Dealer">
+              <point x="-23.75" y="-14.5" />
+              <point x="268.0" y="247.0" />
+              <point x="287.540625" y="247.0" />
+              <point x="-30.375" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Dealer" target="BlackJack.controller.Observer">
+              <point x="-10.125" y="14.5" />
+              <point x="307.790625" y="247.0" />
+              <point x="315.5" y="247.0" />
+              <point x="23.75" y="-14.5" />
+            </edge>
+            <edge source="BlackJack.controller.PlayGame" target="BlackJack.model.Game">
+              <point x="33.666666666666686" y="-14.5" />
+              <point x="349.16666666666663" y="326.0" />
+              <point x="449.29166666666663" y="326.0" />
+              <point x="-19.75" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Dealer" target="BlackJack.model.Player">
+              <point x="30.375" y="-14.5" />
+              <point x="348.290625" y="158.0" />
+              <point x="503.62395833333323" y="158.0" />
+              <point x="-26.666666666666686" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Game" target="BlackJack.model.Player">
+              <point x="31.600000000000023" y="-14.5" />
+              <point x="500.64166666666665" y="247.0" />
+              <point x="549.1239583333332" y="247.0" />
+              <point x="549.1239583333332" y="158.0" />
+              <point x="556.9572916666666" y="158.0" />
+              <point x="26.66666666666663" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Dealer" target="BlackJack.model.Deck">
+              <point x="-10.125" y="-14.5" />
+              <point x="18.5" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Dealer" target="BlackJack.model.rules">
+              <point x="10.125" y="-14.5" />
+              <point x="328.040625" y="148.0" />
+              <point x="418.290625" y="148.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Deck" target="BlackJack.model.Card">
+              <point x="-18.5" y="-14.5" />
+              <point x="270.790625" y="54.0" />
+              <point x="297.2203125" y="54.0" />
+              <point x="-24.333333333333314" y="14.5" />
+            </edge>
+            <edge source="BlackJack.model.Game" target="BlackJack.model.Dealer">
+              <point x="-15.800000000000011" y="-14.5" />
+              <point x="453.24166666666656" y="237.0" />
+              <point x="348.290625" y="237.0" />
+              <point x="30.375" y="14.5" />
+            </edge>
+            <edge source="BlackJack.view.SimpleView" target="BlackJack.view.IView">
+              <point x="-27.25" y="-14.5" />
+              <point x="163.24999999999997" y="326.0" />
+              <point x="155.54062499999995" y="326.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="BlackJack.Program" target="BlackJack.view.SimpleView">
+              <point x="-31.333333333333314" y="-14.5" />
+              <point x="314.6328125" y="405.0" />
+              <point x="190.49999999999997" y="405.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.3" x="349.0" y="237.0" />
+          <SelectedNodes>
+            <node>BlackJack.model.rules</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/Dealer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        <state relative-caret-position="614">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1510852308451" expanded="true" signature="1509:1514" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AmericanNewGameStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/InternationalNewGameStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/IWinTheGameStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/StandardWinTheGameStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/AnotherWinTheGameStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source code/blackjack_java-master/BlackJack/model/rules/RulesFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

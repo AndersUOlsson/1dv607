@@ -17,4 +17,7 @@ public class RulesFactory {
 	public IWinTheGameStrategy GetWinRule() {
 		return new StandardWinTheGameStrategy();
 	}
+	public IWinTheGameStrategy GetAlternateWinRule() {
+		return new AnotherWinTheGameStrategy();
+	}
 }
