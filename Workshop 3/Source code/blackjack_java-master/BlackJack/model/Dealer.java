@@ -25,12 +25,9 @@ public class Dealer extends Player {
 	}
 	
 	public Dealer(RulesFactory a_rulesFactory) {
+		// all rules are decided in the rules factory.
 		m_newGameRule = a_rulesFactory.GetNewGameRule();
-		//m_hitRule = a_rulesFactory.GetSoft17Rule();
-		//NEW!!!!!!!!!!!!!!!!!!!!!!!!
 		m_hitRule = a_rulesFactory.GetHitRule();
-		
-		
 		m_winRule = a_rulesFactory.GetWinRule();
 	}
 	

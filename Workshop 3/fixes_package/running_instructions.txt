@@ -1,0 +1,9 @@
+WINDOWS
+=======
+	- if double clicking the jar doesn't work, try the .exe (it's a wrapper for the jar)
+	- might have to do with java nine if you've updated, this is built with java eight.
+	- i have no idea why it behaves like this, i can run it on my linux machine but not always on win10.
+
+LINUX
+=====
+	- just chmod +x on the jar and run it from the console.

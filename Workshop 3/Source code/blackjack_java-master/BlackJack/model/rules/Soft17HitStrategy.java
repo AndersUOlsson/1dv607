@@ -11,22 +11,22 @@ public class Soft17HitStrategy implements IHitStrategy {
 	
 	public boolean DoHit(Player a_dealer) {
 		
+		// default case --> yeah take a card man
 		boolean rule = true;
-		if(a_dealer.CalcScore() >= 21)
-			rule = false;
-		//if(a_dealer.CalcScore() >= g_hitLimit)
-		if(a_dealer.CalcScore() == this.g_hitLimit){
 		
+		// 18 or above --> no new card
+		if(a_dealer.CalcScore() > this.g_hitLimit)
+			rule = false;
+		
+		// 17 exactly --> new card if youve got an ace
+		else if(a_dealer.CalcScore() == this.g_hitLimit){
 			Iterator<Card> iter = a_dealer.GetHand().iterator();
 			while(iter.hasNext()) {
 				Card temp = iter.next();
-				
-				if(temp.GetValue() == Value.Ace)
+				if(temp.GetValue() == Value.Ace) {
 					rule = true;
-				
-				/*if(temp.GetValue() != Value.Ace ) {
-					rule = false;
-				}*/
+					break;
+				}
 			}
 		}
 		return rule;
