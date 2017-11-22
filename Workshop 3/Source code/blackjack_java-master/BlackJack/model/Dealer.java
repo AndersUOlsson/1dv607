@@ -3,7 +3,7 @@ package BlackJack.model;
 import BlackJack.model.rules.*;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 
 public class Dealer extends Player {
 	
@@ -26,7 +26,11 @@ public class Dealer extends Player {
 	
 	public Dealer(RulesFactory a_rulesFactory) {
 		m_newGameRule = a_rulesFactory.GetNewGameRule();
-		m_hitRule = a_rulesFactory.GetSoft17Rule();
+		//m_hitRule = a_rulesFactory.GetSoft17Rule();
+		//NEW!!!!!!!!!!!!!!!!!!!!!!!!
+		m_hitRule = a_rulesFactory.GetHitRule();
+		
+		
 		m_winRule = a_rulesFactory.GetWinRule();
 	}
 	
@@ -75,34 +79,19 @@ public class Dealer extends Player {
 	 * @return true
 	 */
 	public boolean stand() {
-		
-		
-		if (this.m_deck != null) {
-			this.ShowHand();
-			
-			do {
-				boolean hasAce = false;
-				Iterator<Card> iter = this.m_deck.GetCards().iterator();
-				while(iter.hasNext()) {
-					Card temp = iter.next();
-					if(temp.GetValue() == Card.Value.Ace)
-						hasAce = true;
-				}
-				RulesFactory fac = new RulesFactory();
-				if(hasAce) {
-					this.m_hitRule = fac.GetSoft17Rule();
-				}
-				else {
-					this.m_hitRule = fac.GetHitRule();
-				}
-				
-				if(this.m_hitRule.DoHit(this)) {
-					giveCardToPlayer(this);
-				}
-			}
-			while (this.m_hitRule.DoHit(this));
-		}
-		
-		return true;
-	}
+		  
+		  Card c;
+		  
+		  if(this.m_deck != null) {
+			  ShowHand();
+			  
+			  while(this.m_hitRule.DoHit(this)) {
+				  
+				  c = this.m_deck.GetCard();
+				  c.Show(true);
+				  DealCard(c);
+			  }
+		  }
+		  return true;
+	  }
 }
